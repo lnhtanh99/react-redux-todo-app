@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #000000;
+}
+
+//todos
+.todos {
+  &__add {
+    border: 2px solid #cccccc;
+    max-width: 45px;
+    min-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px auto;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity linear;
+    span {
+      font-size: 35px;
+      color: #000000;
+    }
+  }
+  &__add:hover,
+  &__add:focus {
+    opacity: 1;
+  }
+  &__info {
+    text-transform: capitalize;
+    font-size: 14px;
+    &--completed-task {
+      padding: 20px;
+    }
+  }
+}
+
+//todo
+.todo {
+  border: 2px solid #cccccc;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  &__container {
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  &__description {
+    text-align: left;
+    padding: 10px;
+  }
+  &__project {
+    font-size: 14px;
+    color: #636e72;
+    font-weight: lighter;
+  }
+  &__icon {
+    text-align: right;
+    padding: 10px;
+    span {
+      padding: 0 5px;
+      cursor: pointer;
+    }
+  }
+  &__status {
+    min-width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    text-transform: capitalize;
+  }
+  &__completed {
+    border: 2px solid #2ecc71;
+    color: #2ecc71;
+  }
+  &__pending {
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+  }
+}
+
+//Form 
+.form {
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  &__label {
+    display: block;
+    padding-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  &__content {
+    margin: 15px 0;
+  }
+  &__input {
+    border: 1px solid #b2bec3;
+    min-height: 40px;
+    min-width: 95%;
+    border-radius: 5px;
+  }
+  &__input:hover {
+    border-color: #3498db;
+  }
+  &__buttons {
+    margin-bottom: 5px;
+    button {
+      min-width: 47.5%;
+      padding: 10px;
+      background-color: #ecf0f1;
+      text-transform: capitalize;
+    }
+    &--close {
+      border: 2px solid #3498db;
+      color: #3498db;
+    }
+    &--create {
+      border: 2px solid #3498db;
+      color: #3498db;
+    }
+    &--cancel {
+      border: 2px solid #e74c3c;
+      color: #e74c3c;
+    }
+  }
+}
+
